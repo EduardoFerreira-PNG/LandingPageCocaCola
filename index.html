@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Coca-Cola</title>
+</head>
+
+<body>
+    <section>
+        <div class="circulo"> </div>
+        <header>
+            <a href="#"><img src="assets/logo.png" alt="Logo da Coca Cola" class="logo"></a>
+            <div class="toggle"></div>
+            <ul class="nav">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <div class="conteudo">
+            <div class="texto__conteudo">
+                <h2>Saboreie a sensação</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged.</p>
+                <a href="#">Saiba Mais!</a>
+            </div>
+
+            <div class="img__conteudo">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="assets/cocacola1.png" /></div>
+                      <div class="swiper-slide"><img src="assets/cocacola2.png" /></div>
+                      <div class="swiper-slide"><img src="assets/cocacola3.png" /></div>
+                      <div class="swiper-slide"><img src="assets/cocacola4.png" /></div>
+                      <div class="swiper-slide"><img src="assets/cocacola5.png" /></div>
+                      <div class="swiper-slide"><img src="assets/cocacola6.png" /></div>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="assets/facebook.png" alt="icone facebook"></a></li>
+            <li><a href="#"><img src="assets/twitter.png" alt="icone twitter"></a></li>
+            <li><a href="#"><img src="assets/instagram.png" alt="icone instagram"></a></li>
+        </ul>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+          loop:true
+        });
+      </script>
+</body>
+
+</html>

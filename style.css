@@ -1,0 +1,253 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161616;
+}
+
+.circulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e51e2a;
+    clip-path: circle(70% at right -20%);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    position: relative;
+    max-width: 150px;
+}
+
+.nav{
+    position: relative;
+    display: flex;
+}
+.nav li{
+    list-style: none;
+}
+
+.nav li a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.active{
+    border-bottom: 2px solid #161616;
+}
+
+.conteudo{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto__conteudo{
+    position: relative;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.texto__conteudo h2{
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+
+.texto__conteudo p {
+    color: #fff;
+
+}
+
+.texto__conteudo a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #e51e2a;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.texto__conteudo a:hover{
+    background: #161616;
+    border: 1px solid #e51e2a;
+    transition: 0.3s;
+}
+
+.sci{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    margin-left: 15px;
+    background: #222;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.sci li a:hover{
+    background: #e51e2a;
+    transform: translateY(-10px);
+    transition: 0.2s;
+}
+
+.sci li a img {
+    filter: invert(1);
+    transform: scale(0.5);
+}  
+
+/**************** slide ************/
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+
+  }
+
+  .swiper-3d .swiper-slide-shadow-left ,
+  .swiper-3d .swiper-slide-shadow-right {
+      background-image: none;
+}
+
+  .img__conteudo{
+        width: 700px;
+        display: flex;
+
+ }
+
+ .img__conteudo img{
+    max-width: 150px;
+ }
+
+
+ /*********************** RESPONSIVE AREA ***************************/ 
+
+ @media screen and (max-width: 1000px) {
+        header{
+            padding: 40px;
+        }
+
+        section{
+            padding: 150px 40px;
+        }
+
+        .sci{
+            left: 40px;
+        }
+        .conteudo{
+            flex-direction: column;
+        }
+
+        .texto__conteudo,
+         .img__conteudo{
+        max-width: 100%\;
+        }
+
+        .swiper-slide{
+            
+            height: 330px;
+        }
+
+        .nav{
+            display: none;
+        }
+
+        .nav.ativo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #e51e2a;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .nav li a{
+            margin: 10px 0;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+
+        .toggle{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: url(./assets/menu.png) no-repeat center;
+            background-size: 30px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+
+        .toggle.ativo {
+            background: url(./assets/close.png) no-repeat center;
+            background-size: 25px;
+            cursor: pointer;
+            position: fixed;
+            right: 40px;
+        }
+ }
